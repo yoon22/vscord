@@ -1,0 +1,119 @@
+<!-- <div align="center">
+    <table border="1">
+      <tr>
+        <td> <label for="joid">아이디</label></td>
+        <td><input type="text" id="joid" [(ngModel)]="jo.uiId"><br></td>
+      </tr>
+      <tr>
+        <td><label for="jopwd">비밀번호</label></td>
+        <td><input type="password" id="jopwd" [(ngModel)]="jo.uiPwd"></td>
+      </tr>
+      <tr>
+          <td><label for="joage">나이</label></td>
+          <td><input type="number" id="joage" [(ngModel)]="jo.uiAge"></td>
+        </tr>
+        <tr>
+            <td><label for="joaddress">주소</label></td>
+            <td><input type="text" id="joage" [(ngModel)]="jo.uiAddress"></td>
+          </tr>
+          <tr>
+              <td><label for="uiphone">핸드폰번호</label></td>
+              <td><input type="text" id="uiphone" [(ngModel)]="jo.uiPhone"></td>
+            </tr>
+      <tr>
+        <td colspan="2"> <button (click)="join()">회원가입</button> </td>
+      </tr>
+    </table>
+  </div> -->
+
+<!doctype html>
+<html lang="kr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>회원 가입</title>
+</head>
+
+<body>
+  <!-- Form-->
+  <div class="form">
+    <div class="form-toggle"></div>
+    <div class="form-panel one">
+      <div class="form-header">
+        <h1>Register</h1>
+      </div>
+      <div class="form-content">
+        <form>
+
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" [(ngModel)]="jo.uiId" name="username" required="required" />
+          </div>
+
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" [(ngModel)]="jo.uiPwd" name="password" required="required" />
+          </div>
+
+          <div class="form-group">
+            <label for="Age">Age</label>
+            <input type="number" id="Age" name="Age" [(ngModel)]="jo.uiAge" required="required" />
+          </div>
+
+          <div class="form-group">
+            <label for="address">address</label>
+            <input type="text" id="address" name="address" [(ngModel)]="jo.uiAddress" required="required" />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">phone</label>
+            <input type="text" id="phone" name="phone" [(ngModel)]="jo.uiPhone" required="required" />
+          </div>
+
+
+          <div class="form-group">
+            <label class="form-remember">
+              <input type="checkbox" />Remember Me
+            </label><a href="/login" class="form-recovery">Forgot Password?</a>
+          </div>
+          <div class="form-group">
+            <button type="submit" (click)="join()">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+  <script type="text/javascript">
+  $(document).ready(function() {
+    var panelOne = $('.form-panel.two').height(),
+      panelTwo = $('.form-panel.two')[0].scrollHeight;
+  
+    $('.form-panel.two').not('.form-panel.two.active').on('click', function(e) {
+      e.preventDefault();
+  
+      $('.form-toggle').addClass('visible');
+      $('.form-panel.one').addClass('hidden');
+      $('.form-panel.two').addClass('active');
+      $('.form').animate({
+        'height': panelTwo
+      }, 200);
+    });
+  
+    $('.form-toggle').on('click', function(e) {
+      e.preventDefault();
+      $(this).removeClass('visible');
+      $('.form-panel.one').removeClass('hidden');
+      $('.form-panel.two').removeClass('active');
+      $('.form').animate({
+        'height': panelOne
+      }, 200);
+    });
+  });
+  </script> -->
+</body>
+
+</html>

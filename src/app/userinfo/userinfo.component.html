@@ -1,0 +1,18 @@
+<div>
+  <h2>유저정보 게시판</h2>
+
+  <table class="table table-bordered">
+    <tr>
+      <th>No</th>
+      <th>아이디</th>
+      <th>패스워드</th>
+      <th>나이</th>
+    </tr>
+    <tr *ngFor="let user of userinfoList" >
+      <td>{{user.uiNum}}</td>
+      <td>{{user.uiId}}</td>
+      <td>{{user.uiPwd}}</td>
+      <td>{{user.uiAge}}</td>
+    </tr>
+  </table>
+</div>

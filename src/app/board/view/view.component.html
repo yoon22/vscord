@@ -1,0 +1,78 @@
+<div style="margin:auto 50" *ngIf="board">
+
+  <div ng-app="myApp" ng-controller="myCtrl">
+    <button ng-click="myFunction()">Click Me!</button>
+    <p>{{ count }}</p>
+  </div>
+  <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function ($scope) {
+      $scope.count = 0;
+      $scope.myFunction = function () {
+        $scope.count++;
+      }
+    });
+  </script>
+
+  <h2>{{board.biWriter}} 님의 ({{board.biTitle}}) 게시물</h2>
+  <table class="table table-bordered" *ngIf="board">
+
+    <!-- [(ngModel)]="jo.uiId" -->
+    <tr>
+      <th>번호</th>
+      <td>{{board.biNum}}</td>
+      <th>조회수</th>
+      <td>{{board.biCnt}}</td>
+      <th><button type="button" class="btn btn-danger" (click)="like()">좋아요♡</button></th>
+      <td>{{board.biLike}}</td>
+      
+      
+    </tr>
+
+
+
+    <tr>
+      <th>제목</th>
+      <td colspan="5">{{board.biTitle}}</td>
+    </tr>
+    <tr>
+      <th>작성자</th>
+      <td colspan="5">{{board.biWriter}}</td>
+    </tr>
+
+    <tr>
+      <th>작성내용</th>
+      <td colspan="5">{{board.biContent}}</td>
+    </tr>
+    <tr>
+      <th>작성일</th>
+      <td colspan="5">{{board.biCredat}}</td>
+    </tr>
+    <tr>
+      <th>작성시간</th>
+      <td colspan="5">{{board.biCretim}}</td>
+    </tr>
+    <tr>
+      <th>사진</th>
+      <td colspan="5">{{board.biFile}}</td>
+    </tr>
+    <tr>
+    </tr>
+
+  </table>
+</div>
+<div style="float: right">
+  <table>
+    <tr>
+      <td>
+        <button type="button" class="btn btn-secondary" (click)="goPage('/board')">목록</button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-secondary" (click)="goPage('update/'+board.biNum)">수정</button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-secondary" (click)="doDelete()">삭제</button>
+      </td>
+    </tr>
+  </table>
+</div>

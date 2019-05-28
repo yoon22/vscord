@@ -1,0 +1,41 @@
+<div class="container">
+  <table class="table table-bordered">
+    <!-- [(ngModel)]="jo.uiId" -->
+    <tr>
+      <th>번호</th>
+      <td>{{phoneboardList.phNum}}</td>
+    </tr>
+    <tr>
+      <th>이름</th>
+      <td colspan="3">{{phoneboardList.phName}}</td>
+    </tr>
+    <tr>
+      <th>가격</th>
+      <td colspan="3">{{phoneboardList.phPrice}}</td>
+    </tr>
+
+    <tr>
+      <th>색상</th>
+      <td colspan="3">{{phoneboardList.phColor}}</td>
+    </tr>
+    <tr>
+      <th>용량</th>
+      <td colspan="3">{{phoneboardList.phCapacity}}</td>
+    </tr>
+    <tr>
+      <th>통신사</th>
+      <td colspan="3">{{phoneboardList.phCarriers}}</td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <td>
+        <button type="button" class="btn btn-secondary" (click)="goPage('/phoneboard')">목록</button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-secondary" (click)="goPage('update/'+phoneboard.phNum)">가격수정</button>
+      </td>
+    </tr>
+  </table>
+</div>

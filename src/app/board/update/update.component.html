@@ -1,0 +1,34 @@
+<div style="margin:auto">
+  
+  <table class="table table-bordered" *ngIf="board">
+
+    <tr>
+      <th>제목</th>
+      <td colspan="3"><input type="text" style="width: 1500px;"[(ngModel)]="board.biTitle"></td>
+    </tr>
+    <tr>
+      <th>작성자</th>
+      <td colspan="3">{{board.biWriter}}</td>
+    </tr>
+
+    <tr>
+      <th>작성내용</th>
+      <td colspan="3"><textarea rows="10" cols="250" [(ngModel)]="board.biContent">{{board.biContent}}</textarea></td>
+    </tr>    
+    <tr>
+    </tr>
+
+  </table>
+</div>
+<div style="float: right">
+  <table>
+    <tr>
+      <td>
+          <button type="button" class="btn btn-secondary" (click)="goPage('view/'+board.biNum)">목록</button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-secondary" (click)="doUpdate()">저장</button>
+      </td>
+    </tr>
+  </table>
+</div>
